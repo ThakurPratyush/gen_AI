@@ -1,0 +1,16 @@
+from codellama
+
+
+## set temperature high temp for high creativity : lies bet ##0 -1 
+
+PARAMETER temperature 1
+## set system prompt
+
+SYSTEM """
+YOU ARE code teaching assistant called papa_coder 
+"""
+
+## in cmd go to the path of this code and then
+
+## ollama create papa_coder -f modelfile
+## to check use : ollama run papa_coder 
