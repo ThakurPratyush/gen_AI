@@ -1,0 +1,18 @@
+1) aws bedrock model
+2) aws lambda :a)create function : runtine = python b) write code to generate blob using the code section provided and deploy it
+3) configration : 3 min timeout time
+4) add new boto3 library as layer since new one is not there in lambda 
+    a) create folder boto3_layer/python (inside python load library using pip install boto3 it python/)
+    b) create boto3_layer.zip  
+    c) add this layer by loading the zip file (lambda -> layers -> create layer)
+    d) lambda -> layers -> add layer -> custom layer and choose the zip file
+5) create api to communicate  : api gateway : create interactions: add lambda function : create post : add the link 
+  which we want to trigger the lambda through /blob-generation here
+6) add stage -> dev : get full link  :> full link/dev/blob-generation used in postman to call the lambda
+7) is postmman : post : raw :
+ {
+    "blog_topic":"machine learning and gen ai"
+}
+8) blg_topic is the key used in the function created to get info 
+9) in the lambda function -> monitor -> view cloudwatch logs -> log groups -> to trace the actions
+10 )  lambda function- > configartions -> permissions -> user ->add policy(to add access to the s3)
